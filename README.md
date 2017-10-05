@@ -4,14 +4,14 @@ Convierte un valor de una de las siguientes unidades de medida de masa (Tonelada
 
 ## Instalación
 
-```
+```javascript
 npm install converter-of-mass-units
 ```
 
 ## Uso
 
-```
-import cmu from 'converter-of-mass-units'
+```javascript
+import cmu from 'cmu'
 
 // 1 kg a toneladas
 cmu(1, { agregarUnidad: true }).de.kilogramos.a.toneladas();
