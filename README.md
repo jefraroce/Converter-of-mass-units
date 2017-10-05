@@ -11,8 +11,18 @@ npm install converter-of-mass-units
 ## Uso
 
 ```javascript
-import cmu from 'cmu'
+import cmu from 'cmu';
 
+// Forma mas corta
+cmu(1).de.libras.a.onzas();
+
+// Agregando la abreviatura de la medidad
+cmu(1, { agregarUnidad: true }).de.libras.a.onzas();
+
+// Agregando precision al resultado
+cmu(1, { precision: 1 }).de.libras.a.onzas();
+
+// Otros ejemplos
 // 1 kg a toneladas
 cmu(1, { agregarUnidad: true }).de.kilogramos.a.toneladas();
 
@@ -25,7 +35,8 @@ cmu(1, { agregarUnidad: true }).de.kilogramos.a.onzas();
 // 1 kg a gramos
 cmu(1, { agregarUnidad: true }).de.kilogramos.a.gramos();
 
-// Instanciación de un nuevo objeto
+
+// Instanciación de un nuevo objeto con todas las posibles configuraciones
 var custom_cmu = new cmu(5, {
     agregarUnidad: true,
     precision: 2,
@@ -39,9 +50,7 @@ var custom_cmu = new cmu(5, {
 });
 
 custom_cmu.de.libras.a.toneladas();
-
 custom_cmu.de.gramos.a.onzas();
-
 custom_cmu.de.kilogramos.a.onzas();
 ```
 
